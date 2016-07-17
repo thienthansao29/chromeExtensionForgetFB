@@ -1,0 +1,16 @@
+{
+ "manifest_version": 2,
+
+  "name": "UnAd Plugin",
+  "description": "This extension will analyze a page using GTmetrix",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["popup.js"]
+    }
+  ]
+
+}

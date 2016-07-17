@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GTmetrix Analyzer</title>
+    <script src="popup.js"></script>
+    <script type="text/javascript">
+    	function doSomething()
+		{
+		    var name=document.getElementById("adClaseName").value.trim();
+		 
+		    var time =new Date().getHours();
+		    var text;
+		 
+		    if(time < 12)
+		        text="Good morning, "+name+"!";
+		    else if(time < 18)
+		        text="Good afternoon, "+name+"!";
+		    else
+		        text="Good evening, "+name+"!";
+		 
+		    if(name=="")
+		        text = text.replace(", ","");
+		    alert(text);
+		 
+		}
+    	// add list ad website
+    	function addToList(){
+    		alert("hello");
+    	}
+    	// clear all ad
+    	// function clearAd(adClassName){
+    	// 	document.getElementById(adClassName).innerHTML = '';
+    	// }
+    </script>
+  </head>
+
+  <body>
+    <h1>class of ad</h1>
+    <!-- <input type="text" name="" id="adClaseName"> -->
+    <!-- <input type="button" id="checkPage" value="OK"> -->
+    <input type="button" onclick="clearAd()" value="OK">
+    <!-- <button onclick="doSomething()">Click Me!</button> -->
+  </body>
+</html>
